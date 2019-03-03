@@ -7,11 +7,48 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/enter_name"
+        android:textAllCaps="true"
+        android:inputType="text"
+        tools:ignore="Autofill" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Quantity"
+        android:text="@string/toppings"
+        android:textAllCaps="true" />
+
+    <CheckBox
+        android:id="@+id/checkbox_whipped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/whipped_cream"
+        android:textAllCaps="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"/>
+
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="@string/chocolate"
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/quantity"
         android:textAllCaps="true" />
 
     <LinearLayout
@@ -23,7 +60,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="decrement"
-            android:text="-" />
+            android:text="@string/decrement" />
 
         <TextView
             android:id="@+id/quantity_text_view"
@@ -31,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="0"
+            android:text="@string/default_quantity"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
 
@@ -39,7 +76,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:onClick="increment"
-            android:text="+" />
+            android:text="@string/increment" />
 
     </LinearLayout>
 
@@ -47,15 +84,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Price"
+        android:text="@string/order_summary"
         android:textAllCaps="true" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="$10"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
 
@@ -64,6 +100,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="submitOrder"
-        android:text="Order" />
+        android:text="@string/order" />
 
 </LinearLayout>
