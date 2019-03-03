@@ -30,8 +30,10 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(coffeesQuantity);
-        displayPrice(coffeesQuantity * 5);
+        //display(coffeesQuantity);
+       // displayPrice(coffeesQuantity * 5);
+        String message = "Total:" + NumberFormat.getCurrencyInstance().format(coffeesQuantity * 5) + "\nThank you!";
+        displayMessage(message);
     }
 
     /**
@@ -48,5 +50,10 @@ public class MainActivity extends AppCompatActivity {
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    }
+
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
